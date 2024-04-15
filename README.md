@@ -33,6 +33,7 @@ soubory:
 - `.env` promenne prostredi - nastaveni pristupu do db
 - `prisma/schema.prisma` - nastaveni schematu tabulek
   - po zmene je potreba zavolat `npx prisma migrate dev` cimz zpropaguje schema do vasi db
+  - pokud chcete prejmenovat tabulku, tak to udelate prave tady - v modelu je @@map(NazevTabulky). I po te je potreba zavolat migrate.
 - hlavni magie se deje v `app/routes`:
   - `_index.tsx` - se zobrazi pokud otevrete web
   - `file.tsx` - je to same jako index rozsirene o upload souboru
@@ -43,6 +44,7 @@ soubory:
     - validacni schema - napsane v zodu, pouziva se pro bezpecny parsing dat z formulare. ve schema lze pouzivat regexpy a hromadu dalsich veci.
 - v `app/models` jsou volani do DB podle tabulek - tohle je ta prisma, a neni potreba psat SQL
 - v `utils/server` jsou helpery pro zpracovani formularovych dat, ale to vas nemusi zajimat.
+
 
 
 
