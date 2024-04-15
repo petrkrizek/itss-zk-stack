@@ -36,7 +36,7 @@ soubory:
   - pokud chcete prejmenovat tabulku, tak to udelate prave tady - v modelu je @@map(NazevTabulky). I po te je potreba zavolat migrate.
 - hlavni magie se deje v `app/routes`:
   - `_index.tsx` - se zobrazi pokud otevrete web
-  - `file.tsx` - je to same jako index rozsirene o upload souboru
+  - `file.tsx` - je to same jako index rozsirene o upload souboru. Nazev souboru je cesta v prohlizeci, takze tohle se otevre v localhost:5173/file
   - v dane route lze nalezt:
     - `loader` - ten taha data z db a vraci dolu do komponenty
     - `action` - ten zpracovava formular
